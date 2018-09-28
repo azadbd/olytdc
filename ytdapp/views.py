@@ -32,9 +32,8 @@ def download (request):
                 if vaudiovideo == 'A':
                     files = yt.streams.filter(only_audio=True).order_by('bitrate').desc().first()
                 elif vaudiovideo == 'V':
-                    print('vaudiovideo = '+ vaudiovideo)
                     files = yt.streams.filter().first()
-                print(vaudiovideo)
+                print(files.filesize)
                 title = yt.title
                 itag = files.itag
                 ext  = files.mime_type.split('/')[-1]

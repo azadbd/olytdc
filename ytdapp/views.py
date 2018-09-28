@@ -42,9 +42,9 @@ def download (request):
                 cfullname = itag +  vext
                 print("Fetching: {}...".format(title))
                 file_size = files.filesize
-                print("filesize: " file_size)
+                print("filesize: " +file_size)
                 files.download(download_path, filename=itag)
-                print("itage: "  itag)
+                print("itage: "  +itag)
                 print('path: ' (download_path+'\\'+dfullname+'---'+ download_path+'\\'+cfullname))
                 os.rename(download_path+'\\'+dfullname, download_path+'\\'+cfullname)
                 print("rename done")

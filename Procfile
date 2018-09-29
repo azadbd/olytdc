@@ -1,1 +1,1 @@
-web: gunicorn ytdprj.wsgi --timeout 15 --keep-alive 5 --log-level=info --log-file -
+web: gunicorn ytdprj.wsgi --timeout 30 --keep-alive 5 --log-level=info --log-file -

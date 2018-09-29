@@ -53,6 +53,7 @@ def download (request):
             print('done')
             #except:
             print("ERROR. Check your: -connectio! Try again.")
+            return render(request, 'index.html')
 
         begin = start()
         return render(request, 'index.html')

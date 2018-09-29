@@ -43,7 +43,7 @@ def download (request):
             print("Fetching: {}...".format(title))
             file_size = files.filesize
             print("filesize: " + str(file_size))
-            print('path: '(download_path + '\\' + dfullname + '---' + download_path + '\\' + cfullname))
+            print('path: '+ download_path + '\\' + dfullname + '---' + download_path + '\\' + cfullname)
             files.download(download_path, filename=itag)
             print("itage: "  + itag)
 

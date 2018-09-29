@@ -28,8 +28,8 @@ def download (request):
             print("Your video will be saved to: {}".format(download_path))
 
             #try:
-            yt = pytube.YouTube(vurl, on_progress_callback=progress_Check)
-
+            yt = pytube.YouTube(vurl)
+            #, on_progress_callback=progress_Check
             if vaudiovideo == 'A':
                 files = yt.streams.filter(only_audio=True).order_by('bitrate').desc().first()
             elif vaudiovideo == 'V':
@@ -44,7 +44,7 @@ def download (request):
             file_size = files.filesize
             print("filesize: " + str(file_size))
             print('path: '+ download_path + '/' + dfullname + '---' + download_path + '/' + cfullname)
-            files.download(download_path, filename=itag)
+            files.download(filename=itag)
             print("itage: " + itag)
 
             #os.rename(download_path+'/'+dfullname, download_path+'/'+cfullname)

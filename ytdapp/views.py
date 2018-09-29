@@ -23,7 +23,7 @@ def download (request):
         def start():
             global file_size
             home = os.path.expanduser('~')
-            download_path = 'app/downloads'
+            download_path = '/app/downloads'
             #os.path.join(home, 'Downloads')
             print("Your video will be saved to: {}".format(download_path))
 
@@ -47,7 +47,7 @@ def download (request):
             files.download(download_path, filename=itag)
             print("itage: "  + itag)
 
-            os.rename(download_path+'/'+dfullname, download_path+'/'+cfullname)
+            #os.rename(download_path+'/'+dfullname, download_path+'/'+cfullname)
             print("rename done")
             #subprocess.call(['ffmpeg', '-i',  os.path.join(download_path, dfullname), os.path.join(download_path, cfullname)])
             print('done')

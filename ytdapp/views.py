@@ -45,7 +45,7 @@ def download (request):
             print("filesize: " + str(file_size))
             print('path: '+ download_path + '/' + dfullname + '---' + download_path + '/' + cfullname)
             files.download(download_path, filename=itag)
-            print("itage: "  + itag)
+            print("itage: " + itag)
 
             #os.rename(download_path+'/'+dfullname, download_path+'/'+cfullname)
             print("rename done")

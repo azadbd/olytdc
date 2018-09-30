@@ -43,7 +43,7 @@ def download (request):
                 dpath = download_path / dfullname
                 cpath = download_path / cfullname
                 print("Fetching: {}...".format(title))
-                file_size = files.filesize
+                #file_size = files.filesize
                 print('Starting Download....')
                 files.download(download_path,filename=itag)
                 print('Download Completed')
@@ -54,5 +54,6 @@ def download (request):
                 print("ERROR. Check your: -connectio! Try again.")
 
         begin = start()
-        return render(request, 'index.html')
+    return render(request, 'index.html')
+
 

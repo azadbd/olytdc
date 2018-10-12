@@ -7,7 +7,7 @@
             <p>Download | Convert Youtube Video to MP3 or any other format</p>
           </div>
             <div class="formbox">
-                <form action="/download/" method="post" role="form">
+                <form action="/convert-success/" method="post" role="form">
                   {% csrf_token %}
                     <div class="form-group">
                         <input type="radio" name="audio-video" value="A" checked="checked" onclick="enbleDisableExt()"> <span>Download Audio</span>

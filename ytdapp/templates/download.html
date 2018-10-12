@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 formcontainer">
+          <div class="center">
+            <p>Download | Convert Youtube Video to MP3 or any other format</p>
+          </div>
+            {{ cpath }}
+          <audio controls>
+              <source src="{{ cpath }}" type="audio/mpeg">
+          </audio>
+            <a href="{{ cpath }}" download><button>Download Now</button> </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

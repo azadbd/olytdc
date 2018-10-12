@@ -1,7 +1,7 @@
 *.pyc
 *~
 __pycache__
-cnvenv
+ytdvenv
 db.sqlite3
 .DS_Store
 .env

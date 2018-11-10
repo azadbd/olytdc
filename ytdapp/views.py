@@ -8,7 +8,8 @@ import pathlib
 # Create your views here.
 
 def index (request):
-    return render(request, 'index.html')
+    headlines = "Convert Youtube Video to MP3 or any other format"
+    return render(request, 'index.html', {'headlines': headlines})
 
 def convert (request):
     if request.method == "POST":
@@ -24,30 +25,31 @@ def convert (request):
         download_path = pathlib.Path('media')
         print("Your video will be saved to: {}".format(download_path))
 
-        try:
-            yt = pytube.YouTube(vurl)
+        #try:
+        yt = pytube.YouTube(vurl)
 
-            if vaudiovideo == 'A':
-                files = yt.streams.filter(only_audio=True).order_by('bitrate').desc().first()
-            elif vaudiovideo == 'V':
-                files = yt.streams.filter().first()
+        if vaudiovideo == 'A':
+            files = yt.streams.filter(only_audio=True).order_by('bitrate').desc().first()
+        elif vaudiovideo == 'V':
+            files = yt.streams.filter().first()
 
-            title = yt.title
-            itag = files.itag
-            ext  = files.mime_type.split('/')[-1]
-            dfullname = itag + '.' + ext
-            cfullname = itag +  vext
-            dpath = download_path / dfullname
-            cpath = download_path / cfullname
-            print('Fetching video....')
-            files.download(download_path,filename=itag)
-            print('Starting Video conversion...')
-            os.rename(dpath, cpath)
-            print('Video conversion completed!')
-            return render(request, 'download.html', {'cpath': cpath})
-        except:
-            print("ERROR. Check your: -connectio! Try again.")
-            return render(request, 'index.html')
+        title = yt.title
+        itag = files.itag
+        ext  = files.mime_type.split('/')[-1]
+        dfullname = itag + '.' + ext
+        cfullname = itag +  vext
+        dpath = download_path / dfullname
+        cpath = download_path / cfullname
+        abscpath = "\\" + str(cpath)
+        print('Fetching video....')
+        files.download(download_path,filename=itag)
+        print('Starting Video conversion...')
+        os.rename(dpath, cpath)
+        print('Video conversion completed!')
+        return render(request, 'download.html', {'abscpath': abscpath})
+        #except:
+        #   print("ERROR. Check your: -connection! Try again.")
+        #   return render(request, 'index.html')
 
     def download(request, path):
         file_path = os.path.join(settings.MEDIA_ROOT, path)

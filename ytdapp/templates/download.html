@@ -4,13 +4,15 @@
     <div class="row">
         <div class="col-lg-12 col-sm-12 formcontainer">
           <div class="center">
-            <p>Download | Convert Youtube Video to MP3 or any other format</p>
+            <h1>Download Your Video</h1>
+              <p> Your file has been converted successfully! Download Now</p>
+              <audio controls>
+              <source src="{{ abscpath }}" type="audio/ogg">
+              <source src="{{ abscpath }}" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+            <a href="{{ abscpath }}"  download>Download</a>
           </div>
-            {{ cpath }}
-          <audio controls>
-              <source src="{{ cpath }}" type="audio/mpeg">
-          </audio>
-            <a href="{{ cpath }}" download><button>Download Now</button> </a>
         </div>
     </div>
 </div>

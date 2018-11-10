@@ -3,20 +3,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-sm-12 formcontainer">
-          <div class="center">
-            <p>Download | Convert Youtube Video to MP3 or any other format</p>
-          </div>
             <div class="formbox">
-                <form action="/convert-success/" method="post" role="form">
+                <form action="/download/" method="post" role="form">
                   {% csrf_token %}
+
                     <div class="form-group">
-                        <input type="radio" name="audio-video" value="A" checked="checked" onclick="enbleDisableExt()"> <span>Download Audio</span>
-                        <input type="radio" name="audio-video" value="V" onclick="enbleDisableExt()"> <span>Download Video</span>
+                        Video URL:<input type="text" name="url" value='https://www.youtube.com/watch?v=B7bqAsxee4I' size="64" maxlength="256" class="form-control">
                     </div>
+
                     <div class="form-group">
-                        <p>Video URL</p>
-                        <input type="text" name="url" value='https://www.youtube.com/watch?v=B7bqAsxee4I' size="64" maxlength="256" class="form-control">
+                        <input type="radio" name="audio-video" value="A" checked="checked" onclick="enbleDisableExt()"> <span>Convert to Audio</span>
+                        <input type="radio" name="audio-video" value="V" onclick="enbleDisableExt()"> <span>Convert to Video</span>
                     </div>
+
                     <p> Select Audio/Video Format</p>
                     <div  class="form-group" id = "audio-ext">
                         <select name = "audio-ext"   class="form-control">

@@ -23,6 +23,6 @@ from ytdapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^$', views.index, name = 'index'),
-    url('^convert-success/$', views.convert, name = 'convert'),
+    #url('^convert-success/$', views.convert, name = 'convert'),
     url('^download/$', views.convert, name = 'download'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

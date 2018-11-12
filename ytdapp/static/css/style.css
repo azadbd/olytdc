@@ -22,13 +22,13 @@ h1              { line-height: 1 !important; padding: 0; margin-bottom: 0 !impor
 
 .centerbody     { background-color: #fff;}
 .center         { text-align: center;}
-.convertbtn     { float: right; cursor: pointer;outline: none;color: #fff; background-color: #0000ff; border: none; border-radius: 15px; box-shadow: 0 6px #999;}
-.convertbtn:active { background-color: #3e8e41; box-shadow: 0 4px #666; transform: translateY(4px); }
-.convertbtn:hover{background-color: #58a6f1}
+.convertbtn     { float: right; cursor: pointer;outline: none;color: #fff; background-color: #555; border: none; border-radius: 10px; box-shadow: 0 3px #0056b3;}
+.convertbtn:active { background-color: #666; box-shadow: 0 2px #777; transform: translateY(2px); }
+.convertbtn:hover{background-color: #999}
 .formcontainer  { border: medium none !important; margin: 0 auto;}
 .formbox        { background: #F9F9F9; padding: 25px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); color: #222;}
-.formbox  a     { color:green; font-weight: 700;text-decoration: underline;}
-.formbox  h3    { color:blue; font-weight: 700;}
+.formbox  a     { color:green; font-weight: 600;text-decoration: underline;}
+.formbox  h3    { color:#0056b3; font-weight: 600; text-transform:uppercase;}
 #audio-ext,#video-ext {width:49.5%; display:inline-block;}
 .navbar-brand   { margin:0 !important; padding:0 !important;}
 .logo           { display:block;float:left;color:#eee; text-align:center;background-color:transparent;}
@@ -41,13 +41,13 @@ div.disabled    { pointer-events: none; opacity: 0.5; background: #CCC;}
 *               { box-sizing: border-box;}
 .header         { background-color: #f1f1f1; padding:2px; text-align: center; font-size: 1.2em;}
 .header-text    { width: 50%; margin: 0 auto; text-align: center;}
-.header-text h1 { text-transform:uppercase; color:blue; line-height:1; font-size:1em;}
+.header-text h1 { text-transform:uppercase; color:#0056b3; line-height:1; font-size:1em;}
 .column         { float: left;}
 .column.side    { width: 25%; }
 .column.side p  { padding: 0 10px;}
 .column.middle  { width: 50%; }
 .row:after      { content: ""; display: table; clear: both;}
-.instruction    { background-color: #e7e7e7;padding-top: 20px;}
+.instruction    { padding-top: 20px; margin:16px 0;}
 instruction ul,ol{ padding-left: 18px;}
 .footer         { background-color: #22303e; text-align: center; padding: 10px; width:100%;}
 .footer p,a     { text-align: center; }

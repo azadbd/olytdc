@@ -8,7 +8,7 @@ import pathlib
 # Create your views here.
 
 def index (request):
-    headlines = "Convert Youtube Video to MP3 or any other format"
+    headlines = "Online Video Converter | Downloader"
     return render(request, 'index.html', {'headlines': headlines})
 
 def convert (request):
@@ -26,6 +26,7 @@ def convert (request):
         print("Your video will be saved to: {}".format(download_path))
 
         #try:
+        print(vurl)
         yt = pytube.YouTube(vurl)
 
         if vaudiovideo == 'A':
